@@ -12,14 +12,16 @@ function Write() {
 
   const saveData = async () => {
     const db = getDatabase(app);
-    const newDocRef = push(ref(db, "nature/fruits"));
-    set(newDocRef, {
-      fruitName: inputValue1,
-      fruitDefinition: inputValue2
+    const newDocRef = push(ref(db, "students "));
+
+    await  set(newDocRef, {
+      Name: inputValue1,
+      Email: inputValue2
     }).then( () => {
       alert("data saved successfully")
+      
     }).catch((error) => {
-      alert("error: ", error.message);
+      alert("error: kuch to locha h bhiaya", error.message);
     })
   }
 
@@ -27,13 +29,13 @@ function Write() {
   return (
     <div>
 
-      <h1>WRITE/HOMEPAGE</h1>
+      <h1>Student Data</h1>
 
-      <input type='text' value={inputValue1} 
-      onChange={(e) => setInputValue1(e.target.value)}/> 
-
-      <input type='text' value={inputValue2} 
-      onChange={(e) => setInputValue2(e.target.value)}/> <br/>
+      <input type='text' value={inputValue1} placeholder="Name"
+      onChange={(e) => setInputValue1(e.target.value)} required/> 
+        <br/>
+      <input type='text' value={inputValue2}  placeholder="Email"
+      onChange={(e) => setInputValue2(e.target.value)} required/> <br/>
 
       <button onClick={saveData}>SAVE DATA</button>
       <br />

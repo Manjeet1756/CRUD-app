@@ -2,18 +2,49 @@ body {
   margin: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: rosybrown;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 100vw;
+
 }
 
 .App {
-  width: 50%;
+  height:80vh;
   margin: auto;
-  text-align: center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:20%;
+
+
+
+
+  
+
 }
 
 .button1{
   font-family: 'Trebuchet MS';
   background-color: aquamarine;
   font-weight: bolder;
-  font-size: 19px;
+  font-size: 30px;
+}
+button{
+  font-family: 'Trebuchet MS';
+  background-color: rgb(206, 255, 127);
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+h1{
+  font-size:60px;
+
+}
+input{
+  font-size:30px;
+  margin-bottom:10%;
+
 }
 

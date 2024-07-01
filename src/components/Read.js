@@ -3,6 +3,7 @@ import app from "../firebaseConfig";
 import { getDatabase, ref, get } from "firebase/database";
 import { useNavigate } from 'react-router-dom';
 
+
 function Read() {
   const navigate = useNavigate();
 
@@ -21,7 +22,7 @@ function Read() {
 
   return (
     <div>
-      <h1>READ</h1>
+      <h1>Details</h1>
       <button onClick={fetchData}> Display Data </button>
       <ul>
         {fruitArray.map( (item, index) => (
@@ -37,3 +38,4 @@ function Read() {
 }
 
 export default Read
+
